@@ -7,7 +7,6 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
-
 function NavBar() {
   return (
  
@@ -28,8 +27,10 @@ function NavBar() {
                 <Button className="button-navbar">Productos</Button>
                 <Button className="button-navbar">Contactenos</Button>
                 <Button className="button-navbar">Alumnos</Button>     
-                <Button className="login-button">Iniciar Sesion</Button>    
+                <Button className="login-button">Iniciar Sesion</Button> 
+                 
                 <ShoppingCartIcon  className="cart" fontSize="small" />
+
                 <p className="elUno">1</p>
        
                 </ButtonGroup>
