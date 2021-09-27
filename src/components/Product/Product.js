@@ -1,5 +1,7 @@
 import React from "react";
+import ItemCount from '../ItemCount/ItemCount'
 import './Product.css'
+import Button from '@material-ui/core/Button';
 
 
 /*Class component
@@ -16,18 +18,25 @@ class Product extends React.Component {
 
 //Function component
 
+
 const Producto = (props) =>{
 
 
     return(
-        <>
-            <div className="container-producto">
-                <img src='https://assets.adidas.com/images/w_600,f_auto,q_auto/5d9232dcfdc0453f8169a953000648bb_9366/Remera_FreeLift_Sport_Prime_Lite_Negro_DU1374.jpg' className="imagen-producto" />
+        <div className="container-producto">
+
+            <div className="container-producto-img">
+                <img src={props.img} alt="" className="imagen-producto" />
             </div>
-            <h3>{props.title}</h3>
-            <p>${props.price}</p>
-            <button>Comprar</button>
-        </>
+
+            <div className="container-producto-data">
+                <h3>{props.title}</h3>
+                <p>${props.price}</p>
+                <ItemCount stock={props.stock}/>
+                <Button variant="contained" color="primary" className="button-comprar" >Comprar</Button>
+            </div>
+
+        </div>
     )
 }
 

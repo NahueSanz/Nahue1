@@ -1,7 +1,35 @@
 .container-producto{
-    height: 300px !important;
+    float:left;
+    margin-top: 25px;
+    margin-right: 25px;
+    box-shadow: 1px 1px 6px black;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.container-producto:hover{
+    transform: scale(1.05);
+    box-shadow: 1px 1px 6px brown;
+}
+.container-producto-data{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.container-producto-img{
+    height: 300px;
 }
 
 .imagen-producto{
     height: 100%;
+}
+.button-comprar{
+    margin-top: 5px !important;
 }

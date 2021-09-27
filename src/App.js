@@ -3,6 +3,7 @@ import NavBar from './components/NavBar/NavBar';
 import ListProducts from './components/ListProducts/ListProducts'
 
 function App() {
+
   return (
     <body className="app">
     <div>
