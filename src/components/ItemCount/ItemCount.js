@@ -18,15 +18,6 @@ export default function ItemCount(props) {
         }      
     }
 
-    /*const sumar = () => {
-    {items < props.stock ? (
-        setItems(items + 1),
-        setDisableButtonMinus(false)
-    ):(
-        setDisableButtonPlus(true)
-    )}
-}*/
-
     const restar = () => {
         if(items > 0){
             setItems(items - 1);
@@ -40,9 +31,9 @@ export default function ItemCount(props) {
     return(
 
         <div>
-        <Button  variant="contained" color="primary" disabled= {disableButtonMinus} onClick={restar}>-</Button>
+        <Button  size="small" variant="contained" color="primary" disabled= {disableButtonMinus} onClick={restar}>-</Button>
         {items}
-        <Button variant="contained" color="secondary" disabled= {disableButtonPlus} onClick={sumar}>+</Button>
+        <Button size ="small" variant="contained" color="secondary" disabled= {disableButtonPlus} onClick={sumar}>+</Button>
         </div>
     )
 }

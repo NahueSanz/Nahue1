@@ -30,8 +30,8 @@ const Producto = (props) =>{
             </div>
 
             <div className="container-producto-data">
-                <h3>{props.title}</h3>
-                <p>${props.price}</p>
+                <h2>{props.title}</h2>
+                <h3>${props.price}</h3>
                 <ItemCount stock={props.stock}/>
                 <Button variant="contained" color="primary" className="button-comprar" >Comprar</Button>
             </div>

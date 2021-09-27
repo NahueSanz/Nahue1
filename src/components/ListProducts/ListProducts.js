@@ -2,7 +2,8 @@ import React,{useEffect, useState} from "react";
 import Product from "../Product/Product";
 import './ListProducts.css'
 
-
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 export default function ListProducts(){
 
@@ -48,16 +49,16 @@ const getProducts = new Promise((resolve)=>{
             
         ]
         resolve(mockProducts);
-    }, );//agregar delay cuando haya que entregar esta parte "2000" despues de la coma
+    },2000 );//agregar delay cuando haya que entregar esta parte "2000" despues de la coma
 })
 
-useEffect(()=>{
-    getProducts.then((res)=>{
+    useEffect(()=>{
+        getProducts.then((res)=>{
 
-        setProducts(res)
+            setProducts(res)
 
-    })
-})
+         })
+    },[])
 
     return(
          <div className="contenedor-productos">
@@ -68,7 +69,9 @@ useEffect(()=>{
                      })
 
                      ):(
-                         <div>Cargando...</div>
+                        <Box className="circularProgress">
+                            <CircularProgress />
+                         </Box>
                      )}
 
             
