@@ -1,4 +1,4 @@
-.container-producto{
+.detail-container{
     float:left;
     margin-top: 25px;
     margin-right: 25px;
@@ -10,21 +10,21 @@
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.container-producto:hover{
+.detail-container:hover{
     transform: scale(1.05);
-    box-shadow: 1px 1px 6px brown;
+    box-shadow: 5px 5px 6px rgb(44, 42, 165);
 }
-.container-producto-data{
+.detail-container-data{
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    border-top-style: inset
+    border-top-style: inset;
 }
 
-.container-producto-img{
+.detail-container-img{
     height: 300px;
 }
 
