@@ -1,0 +1,49 @@
+{
+    "Data": [
+      {
+        "id": "1",
+        "price": "1900",
+        "title": "One Punch Man",
+        "stock": 10,
+        "img": "https://i.pinimg.com/originals/d4/53/9b/d4539b9202dbc95a430c629348098a44.jpg",
+        "category": "OPM",
+        "address":"/category/OPM"
+      },
+      {
+        "id": "2",
+        "price": "1800",
+        "title": "Dragon Ball Z",
+        "stock": 5,
+        "img": "http://d3ugyf2ht6aenh.cloudfront.net/stores/615/862/products/dragon-ball-z1-7f0fff34caa7ade8bf15835907751344-640-0.jpg",
+        "category": "DBZ",
+        "address":"/category/DBZ"
+      },
+      {
+        "id": "3",
+        "price": "1700",
+        "title": "Demon Slayer",
+        "stock": 7,
+        "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/402/355/products/whatsapp-image-2021-06-29-at-5-16-18-pm1-572adfb22b7700699d16252320791576-1024-1024.jpeg",
+        "category": "DS",
+        "address":"/category/DS"
+      },
+      {
+        "id": "4",
+        "price": "1700",
+        "title": "Demon Slayer",
+        "stock": 7,
+        "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/402/355/products/whatsapp-image-2021-06-29-at-5-16-18-pm1-572adfb22b7700699d16252320791576-1024-1024.jpeg",
+        "category": "DS",
+        "address":"/category/DS"
+      },
+      {
+        "id": "5",
+        "price": "1700",
+        "title": "Demon Slayer",
+        "stock": 7,
+        "img": "https://d3ugyf2ht6aenh.cloudfront.net/stores/402/355/products/whatsapp-image-2021-06-29-at-5-16-18-pm1-572adfb22b7700699d16252320791576-1024-1024.jpeg",
+        "category": "DS",
+        "address":"/category/DS"
+      }
+    ]
+  }

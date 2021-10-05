@@ -32,8 +32,8 @@ const Producto = (props) =>{
             <div className="container-producto-data">
                 <h2>{props.title}</h2>
                 <h3>${props.price}</h3>
-                <Button variant="contained" color="primary" className="button-comprar" >Comprar</Button>
-                <Link to={`/detalle/${props.id}`}><Button variant="contained" color="primary" className="button-comprar" >Ver</Button></Link>
+                <Link className="link-button" to={`/detalle/${props.id}`}><Button variant="contained" color="primary" className="button-comprar" >Comprar</Button></Link>
+                <Link className="link-button" to={`/detalle/${props.id}`}><Button variant="contained" color="primary" className="button-comprar" >Ver</Button></Link>
             </div>
 
         </div>
