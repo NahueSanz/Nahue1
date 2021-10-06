@@ -12,3 +12,9 @@
 .descripcion-producto{    
     display:none;
 }
+.circularProgress{
+    display: 'flex';
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+}

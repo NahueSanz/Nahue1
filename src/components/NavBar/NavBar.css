@@ -29,8 +29,9 @@
 .login-button:hover{
     color: blue !important;
 }
-.elUno{
-    color: red;
+.link-button{
+display: inline-flex !important;
+text-decoration: none;
 }
 .cart{
     margin: auto;

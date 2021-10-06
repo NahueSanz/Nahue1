@@ -1,35 +1,43 @@
 import React,{useEffect, useState} from "react";
 import ItemDetail from "../ItemDetail/ItemDetail"
 import './ItemDetailContainer.css'
+import data from '../../Items/Data.json'
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
+import { useParams } from "react-router";
+
 
 function ItemDetailContainer(){
 
-    const [infoProduct, setInfoProduct] = useState(null)
-    const getProduct = new Promise((resolve)=>{
-        setTimeout(() => {
-            const mockProduct ={
-                    id:'1',
-                    price:'1900',
-                    title:'One Punch Man',
-                    stock:10,
-                    img:'https://i.pinimg.com/originals/d4/53/9b/d4539b9202dbc95a430c629348098a44.jpg',
-                    descripcion: 'Remera del anime One Punch Man oferta limitada dsps le dedico un poco mas de css a esto, lo juro'
-                }
+    const categoryId = useParams();
+    const [infoProduct, setInfoProduct] = useState([])
 
-            resolve (mockProduct);
-        },2000 );//agregar delay cuando haya que entregar esta parte "2000" despues de la coma
-    })
+    useEffect(()=>{
+        new Promise((resolve)=>{
+            setTimeout(() => {
+                resolve(data);
+            },2000 );
+        })
     
-        useEffect(()=>{
-            getProduct.then((res)=>{
-    
-                setInfoProduct(res)
-    
-             })
-        },[])
+        .then((res)=>{
+            
+            categoryId ? setInfoProduct(res.Data.filter((info) => info.category === categoryId)) : setInfoProduct(res.Data);
+        });
+    },[]);
+
     return(
         <div className="item-detail-container">
-            {infoProduct && <ItemDetail data={infoProduct} />}
+            {infoProduct.length ? (
+               
+               infoProduct.map((infoProduct)=>{//grid y el grid grandote arriba(div)
+                   return <ItemDetail key = {infoProduct.id} info={infoProduct}/>
+                  })
+
+                   ):(
+                   <Box className="circularProgress">
+                       <CircularProgress />
+                   </Box>
+                   )}
             <div className="descripcion-producto">
                 <h1>{infoProduct && infoProduct.descripcion}</h1>
             </div>
