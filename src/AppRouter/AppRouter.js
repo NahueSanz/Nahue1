@@ -4,15 +4,18 @@ import HomePage from '../Pages/HomePage'
 import ContactPage from '../Pages/ContactPage'
 import NavBar from "../components/NavBar/NavBar";
 import ProductDetailPage from "../Pages/ProductDetailPage";
+import ProductCategoryPage from "../Pages/ProductCategoryPage";
+import Cart from "../Pages/Cart";
 
 export default function AppRouter(){
     return (
         <BrowserRouter>
                 <NavBar/>
             <Switch>
-                <Route path="/detalle/:productId" component={ProductDetailPage}/>
-                <Route path="/category/:categoryId" component={ProductDetailPage}/>
+                <Route exact path="/detalle/:productId" component={ProductDetailPage}/>
+                <Route exact path="/category/:categoryId" component={ProductCategoryPage}/>
                 <Route exact path="/contacto" component={ContactPage}/>
+                <Route exact path="/cart" component={Cart}/>
                 <Route exact path="/" component={HomePage}/>
                 <Route path="*"> <Redirect to="/"/></Route>
             </Switch>

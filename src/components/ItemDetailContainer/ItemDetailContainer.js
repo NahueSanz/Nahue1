@@ -21,7 +21,7 @@ function ItemDetailContainer(){
     
         .then((res)=>{
             
-            categoryId ? setInfoProduct(res.Data.filter((info) => info.category === categoryId)) : setInfoProduct(res.Data);
+            categoryId ? setInfoProduct(res.Data.filter((info) => info.id === categoryId.productId)) : setInfoProduct(res.Data);
         });
     },[]);
 

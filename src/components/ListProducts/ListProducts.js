@@ -4,12 +4,12 @@ import './ListProducts.css'
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import data from '../../Items/Data.json'
+import { useParams } from "react-router";
 
 export default function ListProducts(){
 
+const categoryId = useParams();
 const [products, setProducts] = useState([]);
-
-
 
 useEffect(()=>{
     new Promise((resolve)=>{
@@ -19,8 +19,8 @@ useEffect(()=>{
     })
 
     .then((res)=>{
-        
-        setProducts(res.Data);
+
+            categoryId.categoryId ? setProducts(res.Data.filter((info) => info.category === categoryId.categoryId)) : setProducts(res.Data);
     })
 },[])
 
