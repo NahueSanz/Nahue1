@@ -1,7 +1,7 @@
 import React from "react";
-import ItemCount from '../ItemCount/ItemCount'
 import './Product.css'
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 
 /*Class component
@@ -32,8 +32,8 @@ const Producto = (props) =>{
             <div className="container-producto-data">
                 <h2>{props.title}</h2>
                 <h3>${props.price}</h3>
-                <ItemCount stock={props.stock}/>
                 <Button variant="contained" color="primary" className="button-comprar" >Comprar</Button>
+                <Link to={`/detalle/${props.id}`}><Button variant="contained" color="primary" className="button-comprar" >Ver</Button></Link>
             </div>
 
         </div>

@@ -1,0 +1,14 @@
+.item-detail-container{ 
+    display: flex;
+    justify-content: center;
+}
+
+.item-detail-container:hover .descripcion-producto{ 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.descripcion-producto{    
+    display:none;
+}

@@ -1,7 +1,6 @@
 import React,{useEffect, useState} from "react";
 import Product from "../Product/Product";
 import './ListProducts.css'
-
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 
@@ -61,21 +60,21 @@ const getProducts = new Promise((resolve)=>{
     },[])
 
     return(
-         <div className="contenedor-productos">
+        <div className="contenedor-productos">
              
-             {products.length !==0 ? (
-                  products.map((products)=>{//grid y el grid grandote arriba(div)
-                    return <Product key = {products.id} title={products.title} price={products.price} stock={products.stock} img={products.img}/>
-                     })
+            {products.length !==0 ? (
+                products.map((products)=>{//grid y el grid grandote arriba(div)
+                    return <Product key = {products.id} id={products.id} title={products.title} price={products.price} stock={products.stock} img={products.img}/>
+                    })
 
-                     ):(
-                        <Box className="circularProgress">
-                            <CircularProgress />
-                         </Box>
-                     )}
+                    ):(
+                    <Box className="circularProgress">
+                        <CircularProgress />
+                    </Box>
+                    )}
 
             
-          </div>
+        </div>
 
       )
 }

@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Badge from '@mui/material/Badge';
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   return (
@@ -24,9 +25,9 @@ function NavBar() {
             <div>
               
               <ButtonGroup className="button-group">
-                <Button className="button-navbar">Inicio</Button>
+                <Link to="/"><Button className="button-navbar">Inicio</Button></Link>
                 <Button className="button-navbar">Productos</Button>
-                <Button className="button-navbar">Contactenos</Button>
+                <Link to="/contacto"><Button className="button-navbar">Contacto</Button></Link>
                 <Button className="button-navbar">Alumnos</Button>     
                 <Button className="login-button">Iniciar Sesion</Button> 
                 <Badge badgeContent={3} color="error">
