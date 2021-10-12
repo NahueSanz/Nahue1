@@ -1,8 +1,8 @@
-import React from "react";
+import React,{ useContext } from "react";
 import './Product.css'
 import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
-
+import CartContext from "../../context/CartContext";
 
 /*Class component
 
@@ -21,6 +21,12 @@ class Product extends React.Component {
 
 const Producto = (props) =>{
 
+    const { produts, addProduct } = useContext(CartContext);
+
+    const addToCart = () =>{
+        addProduct(props);
+    }
+
 
     return(
         <div className="container-producto">
@@ -32,7 +38,7 @@ const Producto = (props) =>{
             <div className="container-producto-data">
                 <h2>{props.title}</h2>
                 <h3>${props.price}</h3>
-                <Link className="link-button" to={`/detalle/${props.id}`}><Button variant="contained" color="primary" className="button-comprar" >Comprar</Button></Link>
+                <Button onClick={addToCart} variant="contained" color="primary" className="button-comprar" >Comprar</Button>
                 <Link className="link-button" to={`/detalle/${props.id}`}><Button variant="contained" color="primary" className="button-comprar" >Ver</Button></Link>
             </div>
 

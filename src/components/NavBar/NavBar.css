@@ -33,9 +33,3 @@
 display: inline-flex !important;
 text-decoration: none;
 }
-.cart{
-    margin: auto;
-}
-.cart:hover{
-    cursor: pointer;
-}
