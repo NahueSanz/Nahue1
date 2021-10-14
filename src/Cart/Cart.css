@@ -1,0 +1,37 @@
+.cart-widget-title{
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.cart-widget-title:hover{
+    background-color: white;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+    color: black;
+}
+
+.cart-widget-img{
+    height: 100px;
+    width: 100px;
+}
+
+.imagen-producto{
+    height: 100%;
+}
+
+.cart-widget-data{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.cart-widget-product {
+    display: flex;
+    padding: 15px;
+}

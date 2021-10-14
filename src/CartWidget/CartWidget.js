@@ -1,12 +1,25 @@
-import { Button } from "@material-ui/core";
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import CartContext from "../context/CartContext";
 import CloseIcon from '@mui/icons-material/Close';
 import DeleteIcon from '@mui/icons-material/Delete';
 import './CartWidget.css'
-export default function CartWidget({ show, close }) {
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+
+
+
+export default function CartWidget({ toggleDrawer, close, show }) {
 
     const {products} = useContext(CartContext);
+
+    const list = (anchor) => (
+        <Box
+          sx={{ width: 250 }}
+          onClick={toggleDrawer(anchor, false)}
+        >
+          {/*poner aca codigo de lo que quiero que muestre el box*/}
+        </Box>
+      );
 
 
 
