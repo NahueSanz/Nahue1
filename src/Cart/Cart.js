@@ -11,9 +11,23 @@ import './Cart.css'
 
 export default function Cart(){
 
-    const {products} = useContext(CartContext);
+    const {products, removeItem, clear} = useContext(CartContext);
 
-    const [state, setState] = React.useState({
+    const deleteFromCart = () =>{
+        console.log(products[0].id)
+        removeItem(products);
+    }
+
+    const [items, setItems] = useState(1);
+
+    const onAdd = () =>{
+        setItems(items + 1);
+    }
+    const onLess = () =>{
+        items !== 1 && setItems(items - 1);
+    }
+
+    const [state, setState] = useState({
         right: false
       });
 
@@ -28,11 +42,10 @@ export default function Cart(){
     const list = (anchor) => (
         <Box
           sx={{ width: 350 }}
-          onClick={toggleDrawer(anchor, false)}
         >
           <div className= 'cart-widget-title'>
                 <p>Carrito de Compras</p>
-                <Button onClick={toggleDrawer} color='primary'>
+                <Button onClick={toggleDrawer(anchor, false)} color='primary'>
                     <CloseIcon/>
                 </Button>
             </div>
@@ -45,9 +58,12 @@ export default function Cart(){
                         <div className="cart-widget-data">
                             <p>{product.title}</p>
                             <p>${product.price}</p>
+                            <Button size ="small" variant="contained" color="primary" onClick={onAdd}>+</Button>
+                            {items}
+                            <Button size ="small" variant="contained" color="secondary" onClick={onLess}>-</Button>
                         </div>
                         <div className='conteiner-action'>
-                            <Button>
+                            <Button onClick={deleteFromCart}>
                                 <DeleteIcon/>
                             </Button>
                         </div> 
@@ -55,6 +71,9 @@ export default function Cart(){
 
                 )
             })}
+            <Button onClick={clear}>
+                Eliminar Todo
+            </Button>
         </Box>
       );
 
